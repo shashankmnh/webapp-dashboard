@@ -9,6 +9,7 @@
 body {
     position: relative;
     width: 100%;
+	color: #2b2d42;
 }
 
 .header {
@@ -17,6 +18,7 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #f1f1f1;
+	background-image: linear-gradient(to left top, #8711c1, #730ebd, #5e0cb8, #450bb3, #210cae);
 }
 
 .logo {
@@ -27,7 +29,9 @@ body {
 }
 
 .logo span {
-    color: #5073fb;
+    color: #fff;
+	font-weight: 500;
+	font-size: 22px;
 }
 
 
@@ -58,7 +62,7 @@ img {
     top: 0;
     left: 0;
     height: 100%;
-    width: 300px;
+    width: 220px;
     background-color: #fff;
     padding: 30px;
     display: flex;
@@ -66,6 +70,7 @@ img {
     justify-content: space-between;
     border-right: 2px solid #f1f1f1;
     transition: .3s;
+	background-image: linear-gradient(to left top, #f5f5f5, #fbf5f9, #fff5f5, #fff7ec, #fffde7);
 }
 
 .sidebar.active {
@@ -104,6 +109,7 @@ a {
 
 #active--link {
     background-color: #5073fb;
+	background-image: linear-gradient(to right bottom, #8711c1, #730ebd, #5e0cb8, #450bb3, #210cae);
     color: #fff;
 }
 
@@ -121,7 +127,7 @@ a {
 }
 
 .icon-0 {
-    color: #5073fb;
+    color: #c5bc58;
 }
 
 .icon-1 {
@@ -164,7 +170,7 @@ a {
     top: 0;
     right: 0;
     height: 100%;
-    width: calc(100% - 300px);
+    width: calc(100% - 220px);
     padding: 0 40px;
     overflow-y: scroll;
     transition: .3s;
@@ -244,7 +250,7 @@ a {
 }
 
 .stat--icon {
-    color: #5f5ce0;
+    color: #2ecc71;
 }
 
 .up--arrow {
@@ -260,7 +266,8 @@ a {
 }
 
 .card-1 .card--title {
-    color: rgba(80, 115, 251, 1);
+    /*color: rgba(80, 115, 251, 1);*/
+	color: #450bb3;
 }
 
 .card-1 .card--icon--lg {
@@ -268,11 +275,11 @@ a {
 }
 
 .card-2 {
-    background-color: rgba(241, 210, 67, .1);
+    background-color: rgba(80, 115, 251, .1);
 }
 
 .card-2 .card--title {
-    color: rgba(241, 210, 67, 1);
+    color: #450bb3;
 }
 
 .card-2 .card--icon--lg {
@@ -280,11 +287,11 @@ a {
 }
 
 .card-3 {
-    background-color: rgba(112, 215, 165, .1);
+    background-color: rgba(80, 115, 251, .1);
 }
 
 .card-3 .card--title {
-    color: rgba(112, 215, 165, 1);
+    color: #450bb3;
 }
 
 .card-3 .card--icon--lg {
@@ -329,9 +336,14 @@ tr {
     border-bottom: 1px solid #f1f1f1;
 }
 
-td,
+
 th {
     padding-block: 10px;
+}
+
+td{
+	padding-block: 10px;
+	text-align: left;
 }
 
 .edit {
@@ -344,15 +356,18 @@ th {
 }
 
 .invalid {
-    color: #f1d243;
+    /*color: #f1d243;*/
+	color: #f0ad4e;
 }
 
 .success {
-    color: #70d7a5;
+    /*color: #70d7a5;*/
+	color: #22bb33;
 }
 
 .failure {
-    color: #e86786;
+    /*color: #e86786;*/
+	color: #bb2124;
 }
 
 
