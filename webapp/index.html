@@ -14,7 +14,7 @@
     <section class="header">
         <div class="logo">
             <i class="ri-menu-line icon icon-0 menu"></i>
-            <h2>SIP IntegHub</h2>
+            <span>SIP IntegHub</span>
         </div>
 
     </section>
@@ -44,11 +44,10 @@
                 <div class="title">
                     <h2 class="section--title">Overview</h2>
                     <select name="date" id="date" class="dropdown">
-                        <option value="1" selected>Today</option>
+                        <option value="0" selected>Today</option>
                         <option value="7">Last Week</option>
                         <option value="30">Last Month</option>
-                        <option value="365">Last Year</option>
-                        
+                        <option value="90">Last 3 Months</option>
                     </select>
                 </div>
                 <div class="cards">
@@ -61,9 +60,9 @@
                             
                         </div>
                         <div class="card--stats">
-                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>65%</span>
-                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>10</span>
-                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>2</span>
+                            <span ><i class="ri-bar-chart-fill card--icon stat--icon"></i><span id="inbSuccessCountPerc">0%</span></span>
+                            <span class="success" id="inbSuccessCountVal"><i ></i>0</span>
+                            <span class="failure" id="inbFailureCountVal"><i ></i>0</span>
                         </div>
                     </div>
                     <div class="card card-2">
@@ -75,23 +74,23 @@
                             
                         </div>
                         <div class="card--stats">
-                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>82%</span>
-                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>230</span>
-                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>45</span>
+                            <span ><i class="ri-bar-chart-fill card--icon stat--icon"></i><span id="outbSuccessCountPerc">0%</span></span>
+                            <span class="success" id="outbSuccessCountVal"><i ></i>0</span>
+                            <span class="failure" id="outbFailureCountVal"><i ></i>0</span>
                         </div>
                     </div>
                     <div class="card card-3">
                         <div class="card--data">
                             <div class="card--content">
                                 <h5 class="card--title">Total Safety Transactions</h5>
-                                <h1 id="safetyTotalCountVal">0</h1>
+                                <h1 id="safetyUploadTotalCountVal">0</h1>
                             </div>
                             
                         </div>
                         <div class="card--stats">
-                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>27%</span>
-                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>31</span>
-                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>23</span>
+                            <span ><i class="ri-bar-chart-fill card--icon stat--icon"></i><span id="safetyUploadSuccessCountPerc">0%</span></span>
+                            <span class="success" id="safetyUploadSuccessCountVal"><i ></i>0</span>
+                            <span class="failure" id="safetyUploadFailureCountVal"><i></i>0</span>
                         </div>
                     </div>
                     
@@ -104,7 +103,7 @@
                     
                 </div>
                 <div class="table">
-                    <table>
+                    <table id = 'inboundDetailTable'>
                         <thead>
                             <tr>
                                 <th>Exchange Action</th>
@@ -116,54 +115,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>request__c</td>
-                                <td>100</td>
-                                <td class="success">50</td>
-                                <td class="failure">25</td>
-                                <td class="invalid">25</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>distribute__c</td>
-                                <td>100</td>
-                                <td class="success">50</td>
-                                <td class="failure">25</td>
-                                <td class="invalid">25</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>update_metadata__c</td>
-                                <td>100</td>
-                                <td class="success">50</td>
-                                <td class="failure">25</td>
-                                <td class="invalid">25</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>retract_request__c</td>
-                                <td>100</td>
-                                <td class="success">50</td>
-                                <td class="failure">25</td>
-                                <td class="invalid">25</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>delete_distribute__c</td>
-                                <td>100</td>
-                                <td class="success">50</td>
-                                <td class="failure">25</td>
-                                <td class="invalid">25</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>edl_complete__c</td>
-                                <td>100</td>
-                                <td class="success">50</td>
-                                <td class="failure">25</td>
-                                <td class="invalid">25</td>
-                                
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
